@@ -20,7 +20,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 20px;
+            padding: 15px;
         }
 
         .poster {
@@ -28,10 +28,13 @@
             width: 100%;
             background: #ffffff;
             border-radius: 40px 20px 40px 20px;
-            padding: 50px 45px;
+            padding: 45px 40px;
             box-shadow: 0 30px 60px -20px rgba(0,0,0,0.2), 0 0 0 1px #d4af37 inset, 0 0 0 2px #fff8f0 inset;
             position: relative;
             overflow: hidden;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            hyphens: auto;
         }
 
         /* ДЕКОРАТИВНЫЕ ЭЛЕМЕНТЫ */
@@ -107,13 +110,14 @@
 
         /* ТИП СОБЫТИЯ */
         .event-type {
-            font-size: 0.9rem;
+            font-size: clamp(0.8rem, 2.5vw, 0.9rem);
             font-weight: 400;
             color: #8b7356;
-            letter-spacing: 5px;
+            letter-spacing: 4px;
             text-transform: uppercase;
             position: relative;
             padding-left: 30px;
+            word-break: break-word;
         }
 
         .event-type::before {
@@ -121,26 +125,28 @@
             position: absolute;
             left: 0;
             color: #d4af37;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
         }
 
         /* НАЗВАНИЕ ВЫСТАВКИ */
         .exhibition-title {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 4rem;
+            font-size: clamp(2.5rem, 6vw, 4rem);
             font-weight: 700;
             line-height: 1;
             color: #1e1a16;
             margin-bottom: 5px;
             letter-spacing: -0.02em;
+            word-break: break-word;
         }
 
         .exhibition-subtitle {
-            font-size: 1.6rem;
+            font-size: clamp(1.2rem, 3.5vw, 1.6rem);
             font-weight: 400;
             font-style: italic;
             color: #8b7356;
             margin-bottom: 15px;
+            word-break: break-word;
         }
 
         /* ХУДОЖНИК */
@@ -148,16 +154,17 @@
             border-left: 4px solid #d4af37;
             padding-left: 20px;
             margin: 10px 0;
+            word-break: break-word;
         }
 
         .artist-name {
-            font-size: 2rem;
+            font-size: clamp(1.6rem, 4vw, 2rem);
             font-weight: 600;
             color: #1e1a16;
         }
 
         .artist-desc {
-            font-size: 1.1rem;
+            font-size: clamp(0.95rem, 2.5vw, 1.1rem);
             color: #5f5346;
             font-style: italic;
         }
@@ -176,18 +183,20 @@
 
         .date-start {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 3rem;
+            font-size: clamp(2rem, 5vw, 3rem);
             font-weight: 700;
             color: #1e1a16;
+            white-space: nowrap;
         }
 
         .date-end {
-            font-size: 2rem;
+            font-size: clamp(1.3rem, 4vw, 2rem);
             color: #8b7356;
+            white-space: nowrap;
         }
 
         .date-sep {
-            font-size: 2rem;
+            font-size: clamp(1.3rem, 4vw, 2rem);
             color: #d4af37;
             font-weight: 300;
         }
@@ -196,22 +205,24 @@
         .hours {
             background: #f8f3ed;
             border-radius: 60px 10px 60px 10px;
-            padding: 20px 25px;
+            padding: 20px 20px;
             border: 1px solid #e5d9ce;
+            word-break: break-word;
         }
 
         .hours-title {
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             text-transform: uppercase;
             color: #8b7356;
-            letter-spacing: 3px;
+            letter-spacing: 2px;
             margin-bottom: 8px;
         }
 
         .hours-text {
-            font-size: 1.2rem;
+            font-size: clamp(1rem, 3vw, 1.2rem);
             font-weight: 500;
             color: #1e1a16;
+            white-space: nowrap;
         }
 
         /* МЕСТО */
@@ -219,19 +230,22 @@
             display: flex;
             flex-direction: column;
             gap: 5px;
+            word-break: break-word;
         }
 
         .gallery-name {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 1.8rem;
+            font-size: clamp(1.4rem, 4vw, 1.8rem);
             font-weight: 600;
             color: #1e1a16;
+            word-break: break-word;
         }
 
         .gallery-address {
-            font-size: 1rem;
+            font-size: clamp(0.9rem, 2.5vw, 1rem);
             color: #5f5346;
             margin-bottom: 10px;
+            word-break: break-word;
         }
 
         .map-link {
@@ -240,8 +254,9 @@
             text-decoration: none;
             border-bottom: 1px dashed #d4af37;
             padding-bottom: 2px;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             width: fit-content;
+            white-space: nowrap;
         }
 
         .map-link:hover {
@@ -251,22 +266,24 @@
         /* ЦЕНА */
         .price {
             margin: 15px 0 10px;
+            word-break: break-word;
         }
 
         .ticket-price {
-            font-size: 2.2rem;
+            font-size: clamp(1.8rem, 5vw, 2.2rem);
             font-weight: 600;
             color: #1e1a16;
+            white-space: nowrap;
         }
 
         .ticket-price small {
-            font-size: 1rem;
+            font-size: 0.9rem;
             color: #8b7356;
             font-weight: 400;
         }
 
         .ticket-note {
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             color: #8b7356;
             font-style: italic;
         }
@@ -277,9 +294,9 @@
             background: #1e1a16;
             color: #f5f0e8;
             text-decoration: none;
-            padding: 15px 40px;
+            padding: 12px 30px;
             border-radius: 60px;
-            font-size: 1.1rem;
+            font-size: clamp(0.95rem, 3vw, 1.1rem);
             font-weight: 500;
             letter-spacing: 2px;
             transition: 0.3s;
@@ -287,6 +304,7 @@
             text-align: center;
             margin: 20px 0 15px;
             width: fit-content;
+            white-space: nowrap;
         }
 
         .ticket-btn:hover {
@@ -309,10 +327,11 @@
             display: flex;
             align-items: center;
             gap: 6px;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             padding: 5px 0;
             border-bottom: 1px solid transparent;
             transition: 0.2s;
+            white-space: nowrap;
         }
 
         .contact-link:hover {
@@ -326,10 +345,11 @@
             align-items: center;
             gap: 15px;
             margin-top: 20px;
-            padding: 15px 20px;
+            padding: 15px 15px;
             background: #f8f3ed;
             border-radius: 60px 10px 60px 10px;
             border: 1px solid #e5d9ce;
+            flex-wrap: wrap;
         }
 
         .qr-code {
@@ -341,6 +361,7 @@
             align-items: center;
             justify-content: center;
             border: 1px solid #d4af37;
+            flex-shrink: 0;
         }
 
         .qr-code svg {
@@ -349,8 +370,10 @@
         }
 
         .qr-text {
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             color: #5f5346;
+            min-width: 150px;
+            word-break: break-word;
         }
 
         .qr-text strong {
@@ -360,17 +383,18 @@
         /* ПОДВАЛ */
         .footer-note {
             margin-top: 30px;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             color: #9b8f82;
             text-align: center;
             border-top: 1px solid #e5d9ce;
             padding-top: 20px;
+            word-break: break-word;
         }
 
         /* АДАПТАЦИЯ ПОД МОБИЛКУ */
         @media (max-width: 900px) {
             .poster {
-                padding: 40px 30px;
+                padding: 35px 30px;
             }
 
             .content {
@@ -385,47 +409,63 @@
             }
 
             .exhibition-title {
-                font-size: 3.2rem;
-            }
-
-            .exhibition-subtitle {
-                font-size: 1.4rem;
-            }
-        }
-
-        @media (max-width: 600px) {
-            .poster {
-                padding: 30px 20px;
-            }
-
-            .exhibition-title {
                 font-size: 2.8rem;
             }
 
             .exhibition-subtitle {
                 font-size: 1.3rem;
             }
+        }
 
-            .artist-name {
-                font-size: 1.6rem;
+        @media (max-width: 600px) {
+            .poster {
+                padding: 25px 20px;
             }
 
-            .date-start {
+            .exhibition-title {
                 font-size: 2.2rem;
             }
 
+            .exhibition-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .artist-name {
+                font-size: 1.4rem;
+            }
+
+            .date-start {
+                font-size: 1.8rem;
+                white-space: normal;
+            }
+
             .date-end {
-                font-size: 1.5rem;
+                font-size: 1.3rem;
+                white-space: normal;
+            }
+
+            .hours-text {
+                white-space: normal;
+            }
+
+            .ticket-price {
+                white-space: normal;
             }
 
             .ticket-btn {
                 width: 100%;
                 text-align: center;
+                white-space: normal;
+                padding: 12px 15px;
             }
 
             .contacts {
                 flex-direction: column;
                 gap: 10px;
+            }
+
+            .contact-link {
+                white-space: normal;
             }
 
             .qr-small {
@@ -434,25 +474,75 @@
             }
 
             .decor-corner, .decor-corner-left {
-                font-size: 5rem;
+                font-size: 4rem;
+            }
+            
+            .map-link {
+                white-space: normal;
             }
         }
 
         @media (max-width: 400px) {
+            .poster {
+                padding: 20px 15px;
+            }
+            
             .exhibition-title {
-                font-size: 2.2rem;
+                font-size: 1.8rem;
             }
 
             .exhibition-subtitle {
-                font-size: 1.1rem;
-            }
-
-            .hours-text {
                 font-size: 1rem;
             }
 
+            .hours-text {
+                font-size: 0.95rem;
+            }
+
             .ticket-price {
-                font-size: 1.8rem;
+                font-size: 1.5rem;
+            }
+            
+            .gallery-name {
+                font-size: 1.2rem;
+            }
+            
+            .artist-name {
+                font-size: 1.2rem;
+            }
+            
+            .artist-desc {
+                font-size: 0.85rem;
+            }
+            
+            .date-start {
+                font-size: 1.5rem;
+            }
+            
+            .date-end {
+                font-size: 1.1rem;
+            }
+            
+            .qr-text {
+                font-size: 0.7rem;
+            }
+        }
+
+        @media (max-width: 350px) {
+            .exhibition-title {
+                font-size: 1.5rem;
+            }
+            
+            .exhibition-subtitle {
+                font-size: 0.9rem;
+            }
+            
+            .ticket-price {
+                font-size: 1.3rem;
+            }
+            
+            .ticket-price small {
+                font-size: 0.7rem;
             }
         }
     </style>
@@ -468,13 +558,13 @@
 
         <div class="content">
             
-            <!-- ЛЕВАЯ ЧАСТЬ - КАРТИНА -->
+            <!-- ЛЕВАЯ ЧАСТЬ - КАРТИНА (ИСПРАВЛЕНО) -->
             <div class="image-section">
                 <!-- ЗАМЕНИТЕ ЭТУ ССЫЛКУ НА ИЗОБРАЖЕНИЕ КАРТИНЫ -->
                 <img src="https://images.unsplash.com/photo-1579783901586-d88db74b4fe4?w=600&auto=format" alt="картина" class="art-image">
             </div>
 
-            <!-- ПРАВАЯ ЧАСТЬ - ИНФОРМАЦИЯ -->
+            <!-- ПРАВАЯ ЧАСТЬ - ИНФОРМАЦИЯ (ИСПРАВЛЕНО) -->
             <div class="info-section">
                 
                 <!-- ТИП -->
@@ -492,43 +582,43 @@
                     <div class="artist-desc">живопись, графика</div>
                 </div>
 
-                <!-- ДАТЫ -->
+                <!-- ДАТЫ (ИСПРАВЛЕНО) -->
                 <div class="dates">
                     <span class="date-start">15.05</span>
                     <span class="date-sep">—</span>
                     <span class="date-end">30.06.2026</span>
                 </div>
 
-                <!-- ЧАСЫ РАБОТЫ -->
+                <!-- ЧАСЫ РАБОТЫ (ИСПРАВЛЕНО) -->
                 <div class="hours">
                     <div class="hours-title">часы работы</div>
                     <div class="hours-text">вт–вс 11:00 – 20:00</div>
                 </div>
 
-                <!-- МЕСТО -->
+                <!-- МЕСТО (ИСПРАВЛЕНО) -->
                 <div class="location">
                     <div class="gallery-name">Национальный художественный музей</div>
                     <div class="gallery-address">пр. Ленина, 47 · Якутск</div>
                     <a href="https://yandex.ru/maps/?pt=129.720539,62.019363&z=18&l=map" class="map-link" target="_blank">🗺️ открыть карту</a>
                 </div>
 
-                <!-- ЦЕНА -->
+                <!-- ЦЕНА (ИСПРАВЛЕНО) -->
                 <div class="price">
                     <span class="ticket-price">300 ₽ <small>/ входной</small></span>
                     <div class="ticket-note">льготный 150 ₽ · дети до 16 бесплатно</div>
                 </div>
 
-                <!-- КНОПКА -->
+                <!-- КНОПКА (ИСПРАВЛЕНО) -->
                 <a href="#" class="ticket-btn">купить билет</a>
 
-                <!-- КОНТАКТЫ -->
+                <!-- КОНТАКТЫ (ИСПРАВЛЕНО) -->
                 <div class="contacts">
                     <a href="#" class="contact-link" target="_blank">✈️ Telegram</a>
                     <a href="#" class="contact-link" target="_blank">📱 MAX</a>
                     <a href="#" class="contact-link">📞 касса</a>
                 </div>
 
-                <!-- QR-КОД -->
+                <!-- QR-КОД (ИСПРАВЛЕНО) -->
                 <div class="qr-small">
                     <div class="qr-code">
                         <svg viewBox="0 0 100 100">
@@ -553,7 +643,7 @@
             </div>
         </div>
 
-        <!-- ПОДВАЛ -->
+        <!-- ПОДВАЛ (ИСПРАВЛЕНО) -->
         <div class="footer-note">
             касса работает ежедневно с 10:00 до 19:00 · тел. +7 (4112) 45-67-89
         </div>
